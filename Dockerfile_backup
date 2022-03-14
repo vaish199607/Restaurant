@@ -1,0 +1,5 @@
+FROM newimage
+WORKDIR /
+COPY . .
+EXPOSE 27017/tcp
+EXPOSE 3000/tcp
