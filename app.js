@@ -11,7 +11,7 @@ require('./models/user');
 var MongoStore = require('connect-mongo')(session);
 var app = express();
 // connect MongoDB
-mongoose.connect(`mongodb://${process.env.MONGO_HOST}:${process.env.MONGO_PORT}/${process.env.MONGO_DATABASE}`, function(err,db){
+mongoose.connect(`${process.env.MONGO_URL}`, function(err,db){
     if (!err){
         console.log('Connected to /pindB!');
     } else{
